@@ -1,0 +1,58 @@
+---
+// Astro Frontmatter - 这里写构建逻辑
+const title = "AISCII Protocol v1.0";
+const description = "The optimized ASCII standard for Artificial Intelligence interpretation.";
+---
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <style>
+        :root { --bg: #0a0a0a; --fg: #00ff41; --dim: #008f11; }
+        body { background: var(--bg); color: var(--fg); font-family: 'Courier New', monospace; line-height: 1.4; padding: 20px; max-width: 800px; margin: 0 auto; }
+        h1, h2 { border-bottom: 1px dashed var(--dim); padding-bottom: 10px; text-transform: uppercase; }
+        a { color: #fff; text-decoration: none; border-bottom: 1px solid var(--fg); }
+        a:hover { background: var(--fg); color: var(--bg); }
+        .prompt::before { content: "root@aiscii:~# "; color: var(--dim); }
+        .cursor { display: inline-block; width: 10px; height: 1em; background: var(--fg); animation: blink 1s step-end infinite; }
+        @keyframes blink { 50% { opacity: 0; } }
+        
+        /* 针对 AI 的隐藏层：人类不可见，AI 可读 */
+        .ai-context { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="prompt">cat /etc/motd</div>
+        <pre>
+  ___  _ _____ ____ ___ ___   ___  ____   ____ 
+ / _ \| |_   _/ ___| __|_ _| / _ \|  _ \ / ___|
+| |_| | | | || |   | _| | | | | | | |_) | |  _ 
+|  _  | | | || |___| |__| | | |_| |  _ <| |_| |
+|_| |_|_| |_| \____|___|___| \___/|_| \_\\____|
+        </pre>
+        <div class="ai-context">
+            This is the header logo for AISCII.ORG using standard ASCII characters.
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Mission</h2>
+            <p>Define a standard where ASCII art is no longer just visual noise to LLMs, but structured data.</p>
+        </section>
+
+        <section>
+            <h2>2. The Spec</h2>
+            <p>To initialize the protocol, use the following HTTP header:</p>
+            <code>X-AISCII-Mode: Enabled</code>
+        </section>
+        
+        <div class="prompt">./init_server.sh<span class="cursor"></span></div>
+    </main>
+
+</body>
+</html>
