@@ -2,6 +2,7 @@
   "name": "exotic-ephemera",
   "type": "module",
   "version": "0.0.1",
+ "packageManager": "pnpm@9.15.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -11,8 +12,4 @@
   "dependencies": {
     "astro": "^5.16.6"
   }
-{
-  "packageManager": "pnpm@9.15.0"
-}
-
 }
